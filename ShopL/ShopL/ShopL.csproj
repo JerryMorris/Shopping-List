@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="API\" />
+    <Folder Include="ClientApp\src\app\services\" />
     <Folder Include="DTOs\" />
     <Folder Include="Repositroy\" />
     <Folder Include="Services\" />

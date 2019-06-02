@@ -12,6 +12,8 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { DeleteItemComponent } from './delete-item/delete-item.component';
 
+import { ListService } from './services/list.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { DeleteItemComponent } from './delete-item/delete-item.component';
       { path: 'delete-Item', component: DeleteItemComponent },
     ])
   ],
-  providers: [],
+  providers: [
+    ListService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
