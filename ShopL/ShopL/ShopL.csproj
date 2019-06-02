@@ -26,6 +26,10 @@
 
   <ItemGroup>
     <Folder Include="API\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Repositroy\" />
+    <Folder Include="Services\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
