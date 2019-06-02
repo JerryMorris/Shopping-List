@@ -11,23 +11,33 @@
         </div>
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
-            <ul class='nav navbar-nav'>
-                <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-                    <a [routerLink]='["/"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-home'></span> Home
-                    </a>
-                </li>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/counter"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-education'></span> Counter
-                    </a>
-                </li>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
-                    </a>
-                </li>
-            </ul>
+          <ul class='nav navbar-nav'>
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-home'></span> Home
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/shoppingList"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-education'></span> Shopping List
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/add-Item"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-th-list'></span> Add Item
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/edit-Item"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-th-list'></span> Edit Item
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/delete-Item"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-th-list'></span> Delete Item
+              </a>
+            </li>
+          </ul>
         </div>
     </div>
 </div>

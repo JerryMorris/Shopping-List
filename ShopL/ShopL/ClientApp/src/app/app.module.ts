@@ -7,16 +7,20 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { ShoppinglistComponent } from './shoppinglist/shoppinglist.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { EditItemComponent } from './edit-item/edit-item.component';
+import { DeleteItemComponent } from './delete-item/delete-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent
+    ShoppinglistComponent,
+    AddItemComponent,
+    EditItemComponent,
+    DeleteItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -24,8 +28,10 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'shoppingList', component: ShoppinglistComponent },
+      { path: 'add-Item', component: AddItemComponent },
+      { path: 'edit-Item', component: EditItemComponent },
+      { path: 'delete-Item', component: DeleteItemComponent },
     ])
   ],
   providers: [],
