@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ShopL.Models
 {
-    public class List
+    public class List : Audit
 {
 
         public int Id { get; set; }

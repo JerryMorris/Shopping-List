@@ -7,5 +7,7 @@ namespace ShopL.Models
 {
     public class Audit
     {
+        public bool IsActive { get; set; }
+
     }
 }
