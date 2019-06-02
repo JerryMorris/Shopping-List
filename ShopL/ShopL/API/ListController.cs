@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShopL.Data;
+using ShopL.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -27,15 +28,19 @@ namespace ShopL.API
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var item = _context.Lists.Where(i => i.Id == id).FirstOrDefault();
+            return Ok(item);
         }
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]List list)
         {
+            _context.Lists.Add(list);
+            _context.SaveChanges();
+            return Ok();
         }
 
         // PUT api/<controller>/5
@@ -46,8 +51,12 @@ namespace ShopL.API
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var item = _context.Lists.Where(i => i.Id == id).FirstOrDefault();
+            _context.Remove(item);
+            _context.SaveChanges();
+            return Ok();
         }
     }
 }
