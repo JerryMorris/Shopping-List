@@ -1,3 +1,32 @@
-<p>
-  add-item works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="quantity">
+            Store
+          </label>
+          <input type="text" class="form-control" formControlName="quantity" placeholder="quantity">
+        </div>
+        <div class="form-group">
+          <label for="item">
+            Item Name
+          </label>
+          <input type="text" class="form-control" formControlName="itemName" placeholder="itemName">
+          <!--<span *ngIf="submitted && addItemForm.controls.item.errors" class="error">
+                      <span *ngIf="addItemForm.controls.item.errors.required">A message is required</span>
+                    </span>-->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">
+            Store
+          </label>
+          <input type="text" class="form-control" formControlName="store" placeholder="store">
+        </div>
+        <button class="btn btn-success" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

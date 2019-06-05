@@ -38,6 +38,7 @@ namespace ShopL.API
         [HttpPost]
         public IActionResult Post([FromBody]List list)
         {
+            list.IsActive = true;
             _context.Lists.Add(list);
             _context.SaveChanges();
             return Ok();
