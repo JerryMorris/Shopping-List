@@ -10,14 +10,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
-  addItemForm: FormGroup;
   submitted = false;
   public succes = false;
   public model: any;
-  
   itemForm: FormGroup;
-
-
 
   constructor(private listService: ListService, private http: HttpClient) { }
 
@@ -26,7 +22,7 @@ export class AddItemComponent implements OnInit {
       itemName: new FormControl(),
       store: new FormControl(),
       quantity: new FormControl(),
-     
+
     });
   }
 

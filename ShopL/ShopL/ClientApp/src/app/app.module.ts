@@ -33,7 +33,7 @@ import { ListService } from './services/list.service';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'shoppingList', component: ShoppinglistComponent },
       { path: 'add-Item', component: AddItemComponent },
-      { path: 'edit-Item', component: EditItemComponent },
+      { path: 'edit-Item/:id', component: EditItemComponent },
       { path: 'delete-Item', component: DeleteItemComponent },
     ])
   ],
